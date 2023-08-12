@@ -16,11 +16,6 @@ const links = [
   },
   {
     id: 4,
-    url: 'reviews',
-    anchor: 'Отзывы'
-  },
-  {
-    id: 5,
     url: 'contacts',
     anchor: 'Контакты'
   }
