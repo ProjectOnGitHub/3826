@@ -1,5 +1,8 @@
 <template>
-  <base-section class-name="features">
+  <base-section
+    class-name="features"
+    :section-title="pageTitle"
+  >
     <ul class="features__list">
       <li
         v-for="feature in features"
@@ -32,7 +35,8 @@ export default {
   data() {
     return {
       features,
-      images: imagesMap
+      images: imagesMap,
+      pageTitle: 'Наши преимущества'
     };
   }
 };
@@ -40,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 .features {
-  padding: 120px 0;
+  padding: 0;
 
   &__list {
     @include flexible(100%);
@@ -77,12 +81,12 @@ export default {
 
   &__title {
     @include title;
-    font-size: 14px;
+    font-size: 18px;
     color: $color-title-dark;
   }
 
   &__text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
     margin: 0;

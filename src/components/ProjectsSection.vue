@@ -1,5 +1,8 @@
 <template>
-  <base-section class-name="projects">
+  <base-section
+    class-name="projects"
+    :section-title="pageTitle"
+  >
     <ul class="projects__list">
       <li
         v-for="project in projects"
@@ -36,7 +39,8 @@ export default {
   data() {
     return {
       projects,
-      images: imagesMap
+      images: imagesMap,
+      pageTitle: 'Наши проекты'
     };
   }
 };
