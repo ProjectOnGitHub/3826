@@ -689,7 +689,7 @@ html {
 }
 .section__title[data-v-be32b258] {
   padding: 70px 20px 40px 20px;
-  font-size: 76px;
+  font-size: 70px;
   font-weight: 400;
   margin: 0;
   text-transform: uppercase;
@@ -697,6 +697,11 @@ html {
 @media screen and (max-width: 768px) {
 .section__title[data-v-be32b258] {
     font-size: 48px;
+}
+}
+@media screen and (max-width: 480px) {
+.section__title[data-v-be32b258] {
+    font-size: 36px;
 }
 }
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
@@ -879,7 +884,7 @@ html {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
   justify-content: center;
   grid-auto-rows: auto;
   grid-gap: 1px;
@@ -996,7 +1001,7 @@ html {
   position: absolute;
   justify-self: center;
   align-self: start;
-  z-index: 20;
+  z-index: 10;
 }
 .carousel__dots-item[data-v-06426b3c] {
   cursor: pointer;
@@ -1023,11 +1028,14 @@ html {
   width: 100%;
 }
 .carousel__info[data-v-06426b3c] {
+  display: grid;
+  width: 100%;
   position: absolute;
   bottom: 30px;
   padding: 0 10px;
   box-sizing: border-box;
-  width: 100%;
+  grid-gap: 10px;
+  gap: 10px;
   max-width: 500px;
 }
 @media screen and (max-width: 768px) {
@@ -1035,15 +1043,21 @@ html {
     max-width: 300px;
 }
 }
+@media screen and (max-width: 480px) {
+.carousel__info[data-v-06426b3c] {
+    max-width: 250px;
+}
+}
 .carousel__title[data-v-06426b3c] {
   display: grid;
-  width: 110%;
+  width: 100%;
   font-size: 40px;
   margin: 0;
   color: #ffffff;
-  z-index: 20;
+  z-index: 10;
   position: relative;
-  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
 .carousel__title[data-v-06426b3c] {
@@ -1068,7 +1082,9 @@ html {
   color: #ffffff;
   padding: 15px;
   position: relative;
-  z-index: 20;
+  z-index: 10;
+  margin: 0;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
 .carousel__text[data-v-06426b3c] {
@@ -1100,7 +1116,7 @@ html {
   border-radius: 5px;
   background: transparent;
   align-self: center;
-  z-index: 20;
+  z-index: 10;
   height: 40px;
   border-top: 2px solid #f22f20;
   border-bottom: 2px solid #f22f20;
