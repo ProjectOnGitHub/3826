@@ -707,7 +707,7 @@ html {
   background-repeat: no-repeat;
   align-items: center;
   background-size: cover;
-  background-image: url(/assets/background.fd17f337ca5ef387a593.png);
+  background-image: url(/dist/assets/background.fd17f337ca5ef387a593.png);
   position: relative;
 }
 .about[data-v-292bd2c8]::before {

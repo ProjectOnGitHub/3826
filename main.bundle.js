@@ -12560,7 +12560,7 @@ module.exports = __webpack_require__.p + "assets/shtok.e71a72a9bde171251b40.jpg"
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	!function() {
-/******/ 		__webpack_require__.p = "/";
+/******/ 		__webpack_require__.p = "/dist/";
 /******/ 	}();
 /******/ 	
 /************************************************************************/
