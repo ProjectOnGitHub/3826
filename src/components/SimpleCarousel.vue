@@ -230,14 +230,15 @@ export default {
 
   &__button {
     @include button;
-    @include flexible(60px);
+    @include flexible(40px);
     margin: 15px;
     border-radius: 5px;
-    background-color: rgba($color-dark, 0.7);
+    background: transparent;
     align-self: center;
     z-index: 20;
-    height: 60px;
-    border: 2px solid $color-decorate;
+    height: 40px;
+    border-top: 2px solid $color-decorate;
+    border-bottom: 2px solid $color-decorate;
     position: absolute;
     transform: translateX(0);
 
