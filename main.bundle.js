@@ -85,7 +85,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       features: _data_features__WEBPACK_IMPORTED_MODULE_1__["default"],
       images: _utils_images__WEBPACK_IMPORTED_MODULE_2__["default"],
-      pageTitle: 'Наши преимущества'
+      pageTitle: 'Преимущества'
     };
   }
 });
@@ -114,8 +114,18 @@ __webpack_require__.r(__webpack_exports__);
     return {
       projects: _data_projects__WEBPACK_IMPORTED_MODULE_1__["default"],
       images: _utils_images__WEBPACK_IMPORTED_MODULE_2__["default"],
-      pageTitle: 'Наши проекты'
+      pageTitle: 'Проекты',
+      activeProjectId: null
     };
+  },
+  methods: {
+    activateProject: function activateProject(projectId) {
+      if (this.activeProjectId === projectId) {
+        this.activeProjectId = null;
+      } else {
+        this.activeProjectId = projectId;
+      }
+    }
   }
 });
 
@@ -231,7 +241,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       team: _data_team__WEBPACK_IMPORTED_MODULE_1__["default"],
-      pageTitle: 'Наша команда'
+      pageTitle: 'Команда'
     };
   }
 });
@@ -470,7 +480,12 @@ var render = function render() {
   }, _vm._l(_vm.projects, function (project) {
     return _c("li", {
       key: project.id,
-      staticClass: "project"
+      staticClass: "project",
+      on: {
+        touchstart: function touchstart($event) {
+          return _vm.activateProject(project.id);
+        }
+      }
     }, [_c("figure", {
       staticClass: "project__figure"
     }, [_c("img", {
@@ -480,7 +495,9 @@ var render = function render() {
         src: _vm.images["./projects/jpg/".concat(project.image)]
       }
     }), _vm._v(" "), _c("figcaption", {
-      staticClass: "project__caption"
+      class: ["project__caption", {
+        project__caption_active: _vm.activeProjectId === project.id
+      }]
     }, [_c("h2", {
       staticClass: "project__title"
     }, [_vm._v("\n            " + _vm._s(project.name) + "\n          ")]), _vm._v(" "), _c("p", {

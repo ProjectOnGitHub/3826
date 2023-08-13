@@ -925,6 +925,10 @@ html {
   transition: 0.5s ease-in-out;
   background-color: rgba(52, 53, 59, 0.7);
 }
+.project__caption_active[data-v-970da4ea] {
+  visibility: visible;
+  opacity: 1;
+}
 .project__image[data-v-970da4ea] {
   object-fit: cover;
   width: 100%;
