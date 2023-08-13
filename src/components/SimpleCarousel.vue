@@ -110,7 +110,7 @@ export default {
 .carousel {
   @include gridable(100%);
   height: 100%;
-  min-height: 700px;
+  min-height: 650px;
   overflow: hidden;
   position: relative;
   @media screen and (max-width: $tablet) {
@@ -231,7 +231,7 @@ export default {
   &__button {
     @include button;
     @include flexible(60px);
-    margin: 35px;
+    margin: 15px;
     border-radius: 5px;
     background-color: rgba($color-dark, 0.7);
     align-self: center;

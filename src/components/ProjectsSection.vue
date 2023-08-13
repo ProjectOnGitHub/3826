@@ -113,6 +113,9 @@ export default {
     position: absolute;
     transition: 0.5s ease-in-out;
     background-color: rgba($color-background, 0.7);
+    padding: 0 15px;
+    box-sizing: border-box;
+
     &_active {
       visibility: visible;
       opacity: 1;
