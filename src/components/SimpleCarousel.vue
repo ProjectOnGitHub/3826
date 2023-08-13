@@ -110,10 +110,13 @@ export default {
 .carousel {
   @include gridable(100%);
   height: 100%;
-  max-height: 800px;
+  min-height: 700px;
   overflow: hidden;
   position: relative;
   max-width: 1200px;
+  @media screen and (max-width: $tablet) {
+    min-height: 500px;
+  }
 
   &__list {
     @include flexible(100%);
@@ -124,9 +127,10 @@ export default {
     max-width: 1200px;
 
     &-item {
+      @include flexible(100%);
+      justify-content: center;
       flex-shrink: 0;
       position: relative;
-      width: 100%;
       max-width: 1200px;
     }
   }
@@ -169,9 +173,14 @@ export default {
   &__info {
     position: absolute;
     bottom: 30px;
-    left: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    @media screen and (max-width: $tablet) {
+      max-width: 300px;
+    }
   }
-
   &__title {
     @include gridable(110%);
     font-size: 40px;
@@ -180,6 +189,10 @@ export default {
     z-index: 20;
     position: relative;
     justify-content: center;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 24px;
+    }
 
     &::after {
       position: absolute;
@@ -196,12 +209,14 @@ export default {
     @include gridable(110%);
     font-size: 16px;
     width: 100%;
-    max-width: 400px;
     color: $color-light;
-    box-sizing: border-box;
-    padding: 25px;
+    padding: 15px;
     position: relative;
     z-index: 20;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 12px;
+    }
 
     &::after {
       position: absolute;

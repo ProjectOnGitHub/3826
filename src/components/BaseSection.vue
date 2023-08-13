@@ -41,6 +41,9 @@ export default {
     font-weight: 400;
     margin: 0;
     text-transform: uppercase;
+    @media screen and (max-width: $tablet) {
+      font-size: 48px;
+    }
   }
 }
 </style>

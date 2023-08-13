@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://projectongithub.github.io/3826/",
   "scripts": {
     "build": "webpack",
     "start": "npx webpack serve",

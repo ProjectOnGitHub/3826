@@ -66,6 +66,7 @@ export default {
 .project {
   overflow: hidden;
   width: 100%;
+  height: 475px;
 
   &__figure {
     @include flexible(100%);
