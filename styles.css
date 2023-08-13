@@ -924,6 +924,8 @@ html {
   position: absolute;
   transition: 0.5s ease-in-out;
   background-color: rgba(52, 53, 59, 0.7);
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 .project__caption_active[data-v-970da4ea] {
   visibility: visible;
