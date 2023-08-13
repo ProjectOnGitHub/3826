@@ -8,6 +8,7 @@
         v-for="project in projects"
         :key="project.id"
         class="project"
+        @touchstart="activateProject(project.id)"
       >
         <figure class="project__figure">
           <img
@@ -15,7 +16,12 @@
             class="project__image"
             :src="images[`./projects/jpg/${project.image}`]"
           />
-          <figcaption class="project__caption">
+          <figcaption
+            :class="[
+              'project__caption',
+              { project__caption_active: activeProjectId === project.id }
+            ]"
+          >
             <h2 class="project__title">
               {{ project.name }}
             </h2>
@@ -40,8 +46,18 @@ export default {
     return {
       projects,
       images: imagesMap,
-      pageTitle: 'Наши проекты'
+      pageTitle: 'Проекты',
+      activeProjectId: null
     };
+  },
+  methods: {
+    activateProject(projectId) {
+      if (this.activeProjectId === projectId) {
+        this.activeProjectId = null;
+      } else {
+        this.activeProjectId = projectId;
+      }
+    }
   }
 };
 </script>
@@ -97,6 +113,10 @@ export default {
     position: absolute;
     transition: 0.5s ease-in-out;
     background-color: rgba($color-background, 0.7);
+    &_active {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   &__image {

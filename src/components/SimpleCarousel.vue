@@ -141,7 +141,7 @@ export default {
     gap: 10px;
     position: absolute;
     justify-self: center;
-    align-self: end;
+    align-self: start;
     z-index: 20;
 
     &-item {

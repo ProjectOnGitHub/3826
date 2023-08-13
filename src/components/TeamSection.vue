@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       team,
-      pageTitle: 'Наша команда'
+      pageTitle: 'Команда'
     };
   }
 };

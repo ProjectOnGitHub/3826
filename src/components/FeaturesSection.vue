@@ -36,7 +36,7 @@ export default {
     return {
       features,
       images: imagesMap,
-      pageTitle: 'Наши преимущества'
+      pageTitle: 'Преимущества'
     };
   }
 };
