@@ -3,7 +3,7 @@
     :class="iconClass"
     aria-hidden="true"
   >
-    <use :xlink:href="iconName" />
+    <use :xlink:href="`#${iconName}`" />
   </svg>
 </template>
 
@@ -22,11 +22,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.icon {
-  &__feature {
-    width: 60px;
-    height: 60px;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

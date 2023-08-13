@@ -27,28 +27,37 @@
       <li
         v-for="item in items"
         :key="item.id"
-        class="carousel__dots-item carousel__dots-item_selected"
+        :class="setDotClass(item.id)"
+        @click="selectDot(item.id)"
       ></li>
     </ul>
     <button
       class="carousel__button carousel__button_left"
       @click="prevSlide"
     >
-      ←
+      <svg-icon
+        icon-name="arrow-left-icon"
+        icon-class="icon carousel__icon-button"
+      />
     </button>
     <button
       class="carousel__button carousel__button_right"
       @click="nextSlide"
     >
-      →
+      <svg-icon
+        icon-name="arrow-right-icon"
+        icon-class="icon carousel__icon-button"
+      />
     </button>
   </div>
 </template>
 
 <script>
 import imagesMap from '../utils/images';
+import SvgIcon from './SvgIcon.vue';
 
 export default {
+  components: { SvgIcon },
   props: {
     items: {
       type: Array,
@@ -83,6 +92,15 @@ export default {
         this.count = -1;
       }
       this.count += 1;
+    },
+    selectDot(item) {
+      this.count = item - 1;
+    },
+    setDotClass(id) {
+      return {
+        'carousel__dots-item': true,
+        'carousel__dots-item_selected': id - 1 === this.count
+      };
     }
   }
 };
@@ -92,7 +110,7 @@ export default {
 .carousel {
   @include gridable(100%);
   height: 100%;
-  max-height: 700px;
+  max-height: 800px;
   overflow: hidden;
   position: relative;
   max-width: 1200px;
@@ -124,13 +142,19 @@ export default {
     z-index: 20;
 
     &-item {
+      cursor: pointer;
       @include unmarkedList();
       height: 5px;
       width: 40px;
       border: 1px solid $color-decorate;
       border-radius: 1px;
       transform: skewX(-38deg);
-      background-color: rgba($color-decorate, 0.8);
+      background-color: rgba($color-decorate, 0.2);
+      transition: all ease-in-out 0.5s;
+
+      &_selected {
+        background-color: rgba($color-decorate, 0.8);
+      }
     }
   }
 
@@ -139,6 +163,7 @@ export default {
     max-height: 700px;
     object-fit: cover;
     object-position: top;
+    width: 100%;
   }
 
   &__info {
@@ -149,7 +174,7 @@ export default {
 
   &__title {
     @include gridable(110%);
-    font-size: 48px;
+    font-size: 40px;
     margin: 0;
     color: $color-light;
     z-index: 20;
@@ -171,12 +196,13 @@ export default {
     @include gridable(110%);
     font-size: 16px;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     color: $color-light;
     box-sizing: border-box;
     padding: 25px;
     position: relative;
     z-index: 20;
+
     &::after {
       position: absolute;
       content: '';
@@ -191,7 +217,7 @@ export default {
   &__button {
     @include button;
     @include flexible(60px);
-    margin: 15px;
+    margin: 35px;
     border-radius: 5px;
     background-color: rgba($color-dark, 0.7);
     align-self: center;
@@ -199,14 +225,28 @@ export default {
     height: 60px;
     border: 2px solid $color-decorate;
     position: absolute;
+    transform: translateX(0);
 
     &_left {
       justify-self: start;
+
+      &:hover {
+        transform: translateX(-5px);
+      }
     }
 
     &_right {
       justify-self: end;
+      &:hover {
+        transform: translateX(5px);
+      }
     }
+  }
+
+  &__icon-button {
+    width: 40px;
+    height: 40px;
+    fill: $color-decorate;
   }
 }
 </style>

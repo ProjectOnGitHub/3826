@@ -70,13 +70,13 @@ export default {
       flex-direction: column;
       max-width: 296px;
       text-align: center;
+      align-items: center;
     }
   }
 
   &__icon {
-    margin-bottom: 10px;
+    width: 80px;
     height: 80px;
-    object-fit: contain;
   }
 
   &__title {
