@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
 .team {
   width: 100%;
-  max-width: 1200px;
+  max-width: $regular-width;
   box-sizing: border-box;
 }
 </style>

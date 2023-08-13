@@ -113,7 +113,6 @@ export default {
   min-height: 700px;
   overflow: hidden;
   position: relative;
-  max-width: 1200px;
   @media screen and (max-width: $tablet) {
     min-height: 500px;
   }
