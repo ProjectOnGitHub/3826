@@ -14,9 +14,9 @@
           :alt="feature.title"
           class="features__icon"
         />
-        <h3 class="features__subtitle">
+        <h2 class="features__title">
           {{ feature.title }}
-        </h3>
+        </h2>
         <p class="features__text">
           {{ feature.text }}
         </p>
@@ -53,8 +53,6 @@ export default {
     flex-wrap: wrap;
     max-width: 1076px;
     row-gap: 74px;
-    box-sizing: border-box;
-    padding: 0 10px;
 
     @media screen and (max-width: $tablet-large) {
       max-width: 700px;
@@ -81,13 +79,12 @@ export default {
     height: 80px;
   }
 
-  &__subtitle {
-    @include titleH3;
+  &__title {
+    @include titleH2;
     color: $color-text-dark;
   }
 
   &__text {
-    @include text(20px);
     color: $color-text-light;
   }
 }

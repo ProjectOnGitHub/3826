@@ -69,7 +69,7 @@ export default {
   &__list {
     @include gridable(100%);
     @include unmarkedList;
-    grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
     justify-content: center;
     grid-auto-rows: auto;
     gap: 1px;
@@ -130,13 +130,11 @@ export default {
   }
 
   &__title {
-    @include title;
-    font-size: 18px;
+    @include titleH3;
   }
 
   &__text {
-    font-size: 16px;
-    margin: 0;
+    @include text(20px);
   }
 }
 </style>

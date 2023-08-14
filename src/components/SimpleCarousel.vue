@@ -142,7 +142,7 @@ export default {
     position: absolute;
     justify-self: center;
     align-self: start;
-    z-index: 20;
+    z-index: 10;
 
     &-item {
       cursor: pointer;
@@ -170,24 +170,30 @@ export default {
   }
 
   &__info {
+    @include gridable(100%);
     position: absolute;
     bottom: 30px;
     padding: 0 10px;
     box-sizing: border-box;
-    width: 100%;
+    gap: 10px;
     max-width: 500px;
+
     @media screen and (max-width: $tablet) {
       max-width: 300px;
     }
+    @media screen and (max-width: $smartphone) {
+      max-width: 250px;
+    }
   }
   &__title {
-    @include gridable(110%);
+    @include gridable(100%);
     font-size: 40px;
     margin: 0;
     color: $color-light;
-    z-index: 20;
+    z-index: 10;
     position: relative;
-    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
 
     @media screen and (max-width: $tablet) {
       font-size: 24px;
@@ -211,7 +217,9 @@ export default {
     color: $color-light;
     padding: 15px;
     position: relative;
-    z-index: 20;
+    z-index: 10;
+    margin: 0;
+    box-sizing: border-box;
 
     @media screen and (max-width: $tablet) {
       font-size: 12px;
@@ -235,7 +243,7 @@ export default {
     border-radius: 5px;
     background: transparent;
     align-self: center;
-    z-index: 20;
+    z-index: 10;
     height: 40px;
     border-top: 2px solid $color-decorate;
     border-bottom: 2px solid $color-decorate;

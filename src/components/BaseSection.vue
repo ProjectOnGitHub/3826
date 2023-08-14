@@ -36,14 +36,7 @@ export default {
   box-sizing: border-box;
 
   &__title {
-    padding: 70px 20px 40px 20px;
-    font-size: 76px;
-    font-weight: 400;
-    margin: 0;
-    text-transform: uppercase;
-    @media screen and (max-width: $tablet) {
-      font-size: 48px;
-    }
+    @include titleH2;
   }
 }
 </style>

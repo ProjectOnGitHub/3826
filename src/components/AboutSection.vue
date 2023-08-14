@@ -54,47 +54,15 @@ export default { components: { BaseSection } };
   }
 
   &__title {
-    @include title;
-    font-size: 90px;
+    @include titleH1;
     line-height: 1.09;
     padding-bottom: 30px;
-
-    @media screen and (max-width: $desktop) {
-      font-size: 48px;
-    }
-
-    @media screen and (max-width: $tablet) {
-      font-size: 36px;
-    }
-
-    @media screen and (max-width: $tablet-small) {
-      font-size: 32px;
-    }
-
-    @media screen and (max-width: $smartphone) {
-      font-size: 28px;
-      width: 100%;
-    }
   }
 
   &__text {
-    font-size: 22px;
-    line-height: 1.5;
+    @include text(22px);
     text-align: center;
-    margin: 0;
     padding-bottom: 70px;
-
-    @media screen and (max-width: $desktop) {
-      font-size: 18px;
-      padding-bottom: 40px;
-    }
-
-    @media screen and (max-width: $tablet) {
-      font-size: 14px;
-    }
-    @media screen and (max-width: $tablet-small) {
-      font-size: 12px;
-    }
   }
 
   &__button {

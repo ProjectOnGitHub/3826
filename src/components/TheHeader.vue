@@ -8,7 +8,7 @@
       :class="{ header__container_fixed: isScrolled }"
     >
       <a
-        href="/"
+        href="#about"
         class="logo"
       >
         <span class="logo__row logo__row_first">Предприятие</span>
