@@ -745,27 +745,23 @@ html {
 }
 @media screen and (max-width: 1024px) {
 .about__title[data-v-292bd2c8] {
-    font-size: 48px;
-}
-}
-@media screen and (max-width: 768px) {
-.about__title[data-v-292bd2c8] {
-    font-size: 36px;
+    font-size: 70px;
 }
 }
 @media screen and (max-width: 640px) {
 .about__title[data-v-292bd2c8] {
-    font-size: 32px;
+    font-size: 50px;
+    width: 100%;
 }
 }
 @media screen and (max-width: 480px) {
 .about__title[data-v-292bd2c8] {
-    font-size: 28px;
+    font-size: 40px;
     width: 100%;
 }
 }
 .about__text[data-v-292bd2c8] {
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.5;
   font-weight: 400;
   margin: 0;
