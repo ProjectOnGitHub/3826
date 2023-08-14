@@ -538,8 +538,8 @@ var render = function render() {
         src: _vm.images["./features/".concat(feature.icon)],
         alt: feature.title
       }
-    }), _vm._v(" "), _c("h2", {
-      staticClass: "features__title"
+    }), _vm._v(" "), _c("h3", {
+      staticClass: "features__subtitle"
     }, [_vm._v("\n        " + _vm._s(feature.title) + "\n      ")]), _vm._v(" "), _c("p", {
       staticClass: "features__text"
     }, [_vm._v("\n        " + _vm._s(feature.text) + "\n      ")])]);

@@ -690,7 +690,7 @@ html {
 .section__title[data-v-be32b258] {
   padding: 70px 20px 40px 20px;
   font-size: 70px;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   text-transform: uppercase;
 }
@@ -736,10 +736,10 @@ html {
 }
 .about__title[data-v-292bd2c8] {
   text-transform: uppercase;
-  font-weight: 700;
+  font-size: 90px;
+  font-weight: 900;
   margin: 0;
   text-align: center;
-  font-size: 90px;
   line-height: 1.09;
   padding-bottom: 30px;
 }
@@ -765,27 +765,12 @@ html {
 }
 }
 .about__text[data-v-292bd2c8] {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.5;
-  text-align: center;
+  font-weight: 400;
   margin: 0;
+  text-align: center;
   padding-bottom: 70px;
-}
-@media screen and (max-width: 1024px) {
-.about__text[data-v-292bd2c8] {
-    font-size: 18px;
-    padding-bottom: 40px;
-}
-}
-@media screen and (max-width: 768px) {
-.about__text[data-v-292bd2c8] {
-    font-size: 14px;
-}
-}
-@media screen and (max-width: 640px) {
-.about__text[data-v-292bd2c8] {
-    font-size: 12px;
-}
 }
 .about__button[data-v-292bd2c8] {
   display: flex;
@@ -841,6 +826,9 @@ html {
   padding: 0;
   margin: 0;
   font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
   color: #2d3033;
   grid-gap: 20px 40px;
   gap: 20px 40px;
@@ -858,6 +846,19 @@ html {
 }
 .contacts__list-item-name[data-v-0cb7b412] {
   color: #6c7279;
+}
+.contacts__link[data-v-0cb7b412] {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  transition: 0.2s ease;
+  position: relative;
+  color: #f22f20;
+  width: -webkit-max-content;
+  width: max-content;
+}
+.contacts__link[data-v-0cb7b412]:hover {
+  opacity: 0.8;
 }
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4.use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-4.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-4.use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/FeaturesSection.vue?vue&type=style&index=0&id=124d0c30&lang=scss&scoped=true& ***!
@@ -904,16 +905,16 @@ html {
   width: 80px;
   height: 80px;
 }
-.features__title[data-v-124d0c30] {
+.features__subtitle[data-v-124d0c30] {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 900;
   margin: 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   color: #2d3033;
 }
 .features__text[data-v-124d0c30] {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   font-weight: 400;
   margin: 0;
@@ -991,13 +992,15 @@ html {
 }
 .project__title[data-v-970da4ea] {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 900;
   margin: 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
 }
 .project__text[data-v-970da4ea] {
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
   margin: 0;
 }
 /*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
