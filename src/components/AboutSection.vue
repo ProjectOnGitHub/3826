@@ -26,43 +26,43 @@ export default { components: { BaseSection } };
 
 <style lang="scss" scoped>
 .about {
-  height: 100vh;
-  background-repeat: no-repeat;
-  align-items: center;
-  background-size: cover;
-  background-image: url('../assets/images/background.png');
   position: relative;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../assets/images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &::before {
     content: '';
+    position: absolute;
     z-index: 0;
     box-sizing: border-box;
-    position: absolute;
-    background-color: rgba($color-background, 0.7);
-    height: 100vh;
     width: 100%;
+    height: 100vh;
+    background-color: rgba($color-background, 0.7);
   }
 
   &__container {
     @include gridable(100%);
-    justify-items: center;
-    max-width: calc(930px + $common-padding * 2);
     z-index: 5;
-    padding: $header-height $common-padding 0 $common-padding;
+    justify-items: center;
     box-sizing: border-box;
+    max-width: calc(930px + $common-padding * 2);
+    padding: $header-height $common-padding 0 $common-padding;
     color: $color-light;
   }
 
   &__title {
     @include titleH1;
-    line-height: 1.09;
     padding-bottom: 30px;
+    line-height: 1.09;
   }
 
   &__text {
     @include text(22px);
-    text-align: center;
     padding-bottom: 70px;
+    text-align: center;
   }
 
   &__button {
@@ -70,13 +70,13 @@ export default { components: { BaseSection } };
     @include button();
     height: 58px;
     padding: 12px 36px;
-    border-radius: 2px;
     font-size: 27px;
     line-height: 1.61;
-    text-transform: uppercase;
-    border: 3px solid $color-decorate;
     color: $color-light;
+    text-transform: uppercase;
     background-color: $color-dark;
+    border: 3px solid $color-decorate;
+    border-radius: 2px;
 
     &:hover {
       @media #{$mouse-device} {

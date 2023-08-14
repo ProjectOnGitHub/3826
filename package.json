@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://3826.wbdv.ru",
   "scripts": {
     "build": "webpack",
+    "add-domain": "echo \"3826.wbdv.ru\" > dist/CNAME",
     "start": "npx webpack serve",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run add-domain && gh-pages -d dist"
   },
   "dependencies": {
+    "@mapbox/stylelint-processor-arbitrary-tags": "^0.4.0",
     "core-js": "^3.29.1",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "stylelint-webpack-plugin": "^4.1.1",
     "vue": "^2.7.14",
     "vue-router": "^3.6.5",
     "vuex": "^3.6.2"

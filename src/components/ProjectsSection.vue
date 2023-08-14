@@ -69,9 +69,9 @@ export default {
   &__list {
     @include gridable(100%);
     @include unmarkedList;
+    grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
     justify-content: center;
-    grid-auto-rows: auto;
     gap: 1px;
 
     @media screen and (max-width: $smartphone) {
@@ -80,15 +80,15 @@ export default {
   }
 }
 .project {
-  overflow: hidden;
   width: 100%;
   height: 475px;
+  overflow: hidden;
 
   &__figure {
     @include flexible(100%);
+    position: relative;
     height: 100%;
     margin: 0;
-    position: relative;
     cursor: pointer;
 
     &:hover .project__caption {
@@ -101,20 +101,20 @@ export default {
 
   &__caption {
     @include flexible(100%);
+    position: absolute;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    color: $color-light;
-    justify-content: center;
-    text-align: center;
+    box-sizing: border-box;
     height: 100%;
+    padding: 0 15px;
+    text-align: center;
+    color: $color-light;
+    background-color: rgba($color-background, 0.7);
     visibility: hidden;
     opacity: 0;
-    gap: 13px;
-    position: absolute;
     transition: 0.5s ease-in-out;
-    background-color: rgba($color-background, 0.7);
-    padding: 0 15px;
-    box-sizing: border-box;
+    gap: 13px;
 
     &_active {
       visibility: visible;
@@ -123,9 +123,9 @@ export default {
   }
 
   &__image {
-    object-fit: cover;
     width: 100%;
     height: auto;
+    object-fit: cover;
     object-position: center;
   }
 

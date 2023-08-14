@@ -90,30 +90,30 @@ export default {
 <style lang="scss" scoped>
 .header {
   @include gridable(100%);
+  position: relative;
+  z-index: 15;
   grid-area: block;
   justify-items: center;
   box-sizing: border-box;
   height: $header-height;
-  z-index: 15;
   transition: 0.2s ease-in-out;
-  position: relative;
 
   &::after {
     content: '';
-    justify-self: center;
-    box-sizing: border-box;
-    height: 1px;
-    background-color: rgba($color-light, 0.15);
     position: absolute;
     bottom: 0;
+    justify-self: center;
+    box-sizing: border-box;
     width: 100%;
     max-width: $regular-width;
+    height: 1px;
+    background-color: rgba($color-light, 0.15);
   }
 
   &_fixed {
     position: fixed;
-    background-color: rgba($color-background, 0.9);
     height: $header-height-fixed;
+    background-color: rgba($color-background, 0.9);
 
     &::after {
       max-width: none;
@@ -152,11 +152,11 @@ export default {
   &__menu {
     @include flexible(100%);
     @include unmarkedList;
-    gap: 20px 59px;
     align-content: center;
-    font-size: 14px;
     font-weight: 500;
+    font-size: 20px;
     text-transform: uppercase;
+    gap: 20px 59px;
 
     @media screen and (max-width: $tablet-large) {
       position: fixed;
@@ -238,19 +238,19 @@ export default {
   align-items: center;
 
   &__row {
-    text-transform: uppercase;
     line-height: 1;
+    text-transform: uppercase;
 
     &_first {
+      font-size: 10px;
       color: $color-light;
       letter-spacing: 0.8px;
-      font-size: 10px;
     }
 
     &_second {
-      color: $color-dark;
       font-weight: 900;
       font-size: 30px;
+      color: $color-dark;
       letter-spacing: 1.2px;
       text-shadow: -1px -1px 0 $color-light, 1px -1px 0 $color-light, -1px 1px 0 $color-light,
         1px 1px 0 $color-light;

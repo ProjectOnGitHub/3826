@@ -2,15 +2,17 @@
   <div class="root">
     <the-header />
     <the-main />
+    <the-footer />
   </div>
 </template>
 
 <script>
+import TheFooter from './components/TheFooter.vue';
 import TheHeader from './components/TheHeader.vue';
 import TheMain from './components/TheMain.vue';
 
 export default {
-  components: { TheHeader, TheMain }
+  components: { TheHeader, TheMain, TheFooter }
 };
 </script>
 

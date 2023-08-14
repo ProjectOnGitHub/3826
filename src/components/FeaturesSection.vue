@@ -51,7 +51,7 @@ export default {
     @include unmarkedList;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1076px;
+    max-width: $regular-width;
     row-gap: 74px;
     box-sizing: border-box;
     padding: 0 10px;

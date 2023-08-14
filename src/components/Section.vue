@@ -66,11 +66,11 @@ export default {
 
     &-item {
       @include flexible(100%);
-      gap: 25px;
       flex-direction: column;
+      align-items: center;
       max-width: 296px;
       text-align: center;
-      align-items: center;
+      gap: 25px;
     }
   }
 
