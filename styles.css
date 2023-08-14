@@ -811,6 +811,7 @@ html {
 @media screen and (max-width: 768px) {
 .contacts__container[data-v-0cb7b412] {
     grid-template-columns: 1fr;
+    padding: 0;
 }
 }
 .contacts__list[data-v-0cb7b412] {
@@ -832,6 +833,8 @@ html {
 @media screen and (max-width: 768px) {
 .contacts__list[data-v-0cb7b412] {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 }
 .contacts__list-item[data-v-0cb7b412] {
