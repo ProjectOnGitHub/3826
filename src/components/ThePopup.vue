@@ -65,10 +65,10 @@ export default {
 
   &__button-close {
     position: absolute;
-    top: -40px;
-    right: -40px;
-    width: 40px;
-    height: 40px;
+    top: -24px;
+    right: -24px;
+    width: 24px;
+    height: 24px;
     background-color: $color-decorate;
     border: none;
     border-radius: 50%;
@@ -76,6 +76,12 @@ export default {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+
+    &:hover {
+      transform: rotate(180deg);
+    }
 
     &::before,
     &::after {
@@ -95,14 +101,16 @@ export default {
     }
 
     &:hover {
-      background-color: #d32f2f;
+      background-color: rgba($color-decorate, 0.8);
     }
   }
+
   &-fade {
     &-enter-active,
     &-leave-active {
       transition: opacity 0.5s;
     }
+
     &-enter,
     &-leave-to {
       opacity: 0;
