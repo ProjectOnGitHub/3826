@@ -52,7 +52,7 @@ export default {
     z-index: 9;
     width: 100%;
     height: 100%;
-    background: rgba(41, 41, 41, 0.6);
+    background: rgba($color-text-dark, 0.6);
     transition: background 0.5s;
   }
 
