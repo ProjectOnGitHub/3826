@@ -11,17 +11,38 @@
         name="about-button"
         type="button"
         aria-label="Find out more"
+        @click="togglePopup"
       >
         Узнать больше
       </button>
     </div>
+    <the-popup
+      :is-open="isOpen"
+      :toggle-popup="togglePopup"
+    >
+      <youtube-container video-id="0UBiw1xkHl8" />
+    </the-popup>
   </base-section>
 </template>
 
 <script>
 import BaseSection from './BaseSection.vue';
+import ThePopup from './ThePopup.vue';
+import YoutubeContainer from './YoutubeContainer.vue';
 
-export default { components: { BaseSection } };
+export default {
+  components: { BaseSection, ThePopup, YoutubeContainer },
+  data() {
+    return {
+      isOpen: false
+    };
+  },
+  methods: {
+    togglePopup() {
+      this.isOpen = !this.isOpen;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
