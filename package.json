@@ -8,7 +8,7 @@
     "build": "webpack",
     "add-domain": "echo \"3826.wbdv.ru\" > dist/CNAME",
     "start": "npx webpack serve",
-    "deploy": "npm run add-domain && gh-pages -d dist"
+    "deploy": "npm run build && npm run add-domain && gh-pages -d dist"
   },
   "dependencies": {
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.4.0",
