@@ -16,7 +16,13 @@ import ProjectsSection from './ProjectsSection.vue';
 import TeamSection from './TeamSection.vue';
 
 export default {
-  components: { AboutSection, FeaturesSection, ProjectsSection, TeamSection, ContactsSection }
+  components: {
+    AboutSection,
+    FeaturesSection,
+    ProjectsSection,
+    TeamSection,
+    ContactsSection
+  }
 };
 </script>
 
