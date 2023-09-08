@@ -3,6 +3,9 @@
     <ul
       class="carousel__list"
       :style="{ transform: transform }"
+      @touchstart="startSwipe"
+      @touchmove="swipe"
+      @touchend="endSwipe"
     >
       <li
         v-for="item in items"
@@ -69,7 +72,11 @@ export default {
   data() {
     return {
       images: imagesMap,
-      count: 0
+      count: 0,
+      startX: 0,
+      currentX: 0,
+      isSwiping: false,
+      swipeThreshold: 50
     };
   },
   computed: {
@@ -101,6 +108,27 @@ export default {
         'carousel__dots-item': true,
         'carousel__dots-item_selected': id - 1 === this.count
       };
+    },
+    startSwipe(event) {
+      this.startX = event.touches[0].clientX;
+      this.currentX = this.startX;
+      this.isSwiping = true;
+    },
+    swipe(event) {
+      if (!this.isSwiping) return;
+      this.currentX = event.touches[0].clientX;
+      const deltaX = this.currentX - this.startX;
+      if (Math.abs(deltaX) >= this.swipeThreshold) {
+        if (deltaX > 0) {
+          this.prevSlide();
+        } else if (deltaX < 0) {
+          this.nextSlide();
+        }
+        this.endSwipe();
+      }
+    },
+    endSwipe() {
+      this.isSwiping = false;
     }
   }
 };
