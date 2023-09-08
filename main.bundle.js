@@ -203,7 +203,11 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       images: _utils_images__WEBPACK_IMPORTED_MODULE_0__["default"],
-      count: 0
+      count: 0,
+      startX: 0,
+      currentX: 0,
+      isSwiping: false,
+      swipeThreshold: 50
     };
   },
   computed: {
@@ -235,6 +239,27 @@ __webpack_require__.r(__webpack_exports__);
         'carousel__dots-item': true,
         'carousel__dots-item_selected': id - 1 === this.count
       };
+    },
+    startSwipe: function startSwipe(event) {
+      this.startX = event.touches[0].clientX;
+      this.currentX = this.startX;
+      this.isSwiping = true;
+    },
+    swipe: function swipe(event) {
+      if (!this.isSwiping) return;
+      this.currentX = event.touches[0].clientX;
+      var deltaX = this.currentX - this.startX;
+      if (Math.abs(deltaX) >= this.swipeThreshold) {
+        if (deltaX > 0) {
+          this.prevSlide();
+        } else if (deltaX < 0) {
+          this.nextSlide();
+        }
+        this.endSwipe();
+      }
+    },
+    endSwipe: function endSwipe() {
+      this.isSwiping = false;
     }
   }
 });
@@ -718,6 +743,11 @@ var render = function render() {
     staticClass: "carousel__list",
     style: {
       transform: _vm.transform
+    },
+    on: {
+      touchstart: _vm.startSwipe,
+      touchmove: _vm.swipe,
+      touchend: _vm.endSwipe
     }
   }, _vm._l(_vm.items, function (item) {
     return _c("li", {
